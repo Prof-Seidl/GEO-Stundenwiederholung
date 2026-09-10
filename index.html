@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geografie-Quiz · Auswahl</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="app-header">
+    <span class="badge">Geografie 2. Jahrgang HAK</span>
+    <h1>Kapitel-Quiz</h1>
+    <p>Wählen Sie ein Kapitel, um das summative Quiz zu starten.</p>
+  </header>
+
+  <div class="card">
+    <h2>Verfügbare Kapitel</h2>
+    <div class="chapter-list">
+      <a class="chapter-item" href="kapitel6.html">
+        <span>Kapitel 6 – Zentren der Weltwirtschaft außerhalb Europas</span>
+        <span class="arrow">→</span>
+      </a>
+      <!--
+        Weitere Kapitel einfach nach demselben Muster ergänzen:
+        1. quiz-data-kapitelX.js im Ordner js/ anlegen (siehe quiz-data-kapitel6.js als Vorlage)
+        2. kapitel6.html kopieren zu kapitelX.html und den Skript-Verweis anpassen
+        3. Hier einen weiteren <a class="chapter-item"> Eintrag hinzufügen
+      -->
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Für Lehrpersonen</h2>
+    <p style="color:var(--muted); font-size:0.92rem;">Ergebnisse ansehen, Bestenliste prüfen und als Excel-Datei für iDoceo exportieren.</p>
+    <a class="btn-secondary" href="lehrer.html" style="display:inline-block; text-decoration:none;">Zum Lehrer-Bereich</a>
+  </div>
+
+  <p class="footer-note">Geospots HAK · Geografie 2. Jahrgang</p>
+</div>
+</body>
+</html>
