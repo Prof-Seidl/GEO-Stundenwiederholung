@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lehrer-Bereich · Geografie-Quiz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="app-header">
+    <span class="badge">Lehrer-Bereich</span>
+    <h1>Ergebnisse &amp; Export</h1>
+    <p>Passwortgeschützter Zugang zu allen Quiz-Ergebnissen.</p>
+  </header>
+
+  <!-- Passwort-Abfrage -->
+  <div class="card" id="screen-login">
+    <h2>Anmeldung</h2>
+    <label for="input-password">Passwort</label>
+    <input type="password" id="input-password" autocomplete="off">
+    <p class="error-msg hidden" id="login-error">Falsches Passwort.</p>
+    <button class="btn-primary" id="btn-login">Anmelden</button>
+    <p class="footer-note" style="margin-top:16px;">
+      Hinweis: Dieser Passwortschutz blendet die Übersicht für SchülerInnen aus. Er ersetzt keine echte
+      Zugriffskontrolle auf Datenbankebene – Details dazu stehen in der README.
+    </p>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="card hidden" id="screen-dashboard">
+    <h2 id="dashboard-heading">Übersicht</h2>
+    <label for="kapitel-auswahl">Kapitel</label>
+    <select id="kapitel-auswahl" style="margin-bottom:16px;"></select>
+    <div class="stat-row">
+      <div class="stat-box"><div class="num" id="stat-count">–</div><div class="lbl">Abgegebene Quizze</div></div>
+      <div class="stat-box"><div class="num" id="stat-avg">–</div><div class="lbl">Ø Prozent</div></div>
+      <div class="stat-box"><div class="num" id="stat-best">–</div><div class="lbl">Beste Leistung</div></div>
+    </div>
+    <button class="btn-secondary" id="btn-refresh">Aktualisieren</button>
+    <button class="btn-secondary" id="btn-export" style="margin-left:8px;">Als Excel exportieren (für iDoceo)</button>
+  </div>
+
+  <div class="card hidden" id="screen-table">
+    <h2 id="table-heading">Alle Ergebnisse</h2>
+    <div class="table-wrap">
+      <table class="results-table">
+        <thead>
+          <tr><th>Name</th><th>Kap.</th><th>Punkte</th><th>Max.</th><th>%</th><th>Datum</th></tr>
+        </thead>
+        <tbody id="results-body"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <p class="footer-note"><a class="link-quiet" href="index.html">Zurück zur Kapitelauswahl</a></p>
+</div>
+
+<!-- Firebase SDK (compat) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<!-- SheetJS für den Excel-Export -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="js/lehrer.js"></script>
+</body>
+</html>
