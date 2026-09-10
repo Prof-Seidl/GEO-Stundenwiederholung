@@ -27,10 +27,11 @@ const QUIZ_DATA = {
       unterkapitel: "8.1 Entstehung der EU – ein Friedensprojekt",
       frage: "Bringe die folgenden EU-Verträge in die richtige chronologische Reihenfolge.",
       elemente: [
-        "Vertrag von Paris (EGKS, 1951)",
-        "Römische Verträge (EWG und Euratom, 1957)",
-        "Vertrag von Maastricht (1993)",
+        "Vertrag von Paris (EGKS)",
         "Vertrag von Lissabon (2009)"
+        "Römische Verträge (EWG und Euratom)",
+        "Vertrag von Maastricht (1993)",
+        
       ]
     },
 
